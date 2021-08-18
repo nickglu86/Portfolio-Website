@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1" />
+    <title>Hello World!</title>
+    <style>
+        :root{
+    --main-color: #282c34;
+    font-family: sans-serif;
+    background: var(--main-color);
+}
+
+main{
+    width: 1200px;
+    margin: 0 auto;
+}
+.greeting-wrapper{
+    /* width: 180px;
+    margin: 0 auto; */
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 400px;
+    margin: 0 auto;
+    background-image: url("computer.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.greeting-wrapper h1 {
+    width: 180px;
+    color: #fff;
+    overflow: hidden; /* Ensures the content is not revealed until the animation */
+    border-right: .15em solid orange; /* The typwriter cursor */
+    white-space: nowrap; /* Keeps the content on a single line */
+    margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+    letter-spacing: .15em; /* Adjust as needed */
+    animation: 
+      typing 2s steps(70, end),
+      blink-caret .75s step-end infinite;
+  }
+  
+  /* The typing effect */
+  @keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+  }
+  
+  /* The typewriter cursor effect */
+  @keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: orange; }
+  }
+
+    .greeting-wrapper h2 {
+        animation: showBlock 0s 2.5s forwards;
+        visibility: hidden;
+        color: #ffffffab;
+        font-weight: 400;
+        letter-spacing: .1em;
+
+    }
+    
+    @keyframes showBlock {
+        to { visibility: visible; }
+    }
+    </style>
+</head>
+<body>
+    <section class="s1">
+       <main>
+           <div class="greeting-wrapper">
+               <div>
+                <h1>Hello World!</h1>
+               </div>
+               <h2>I am Web Developer!</h2>
+           </div>
+           <div class="intro-wrapper">
+               <div class="left-column">
+
+               </div>
+               <div class="right-column">
+
+               </div>
+           </div>
+       </main>
+    </section>
+</body>
+</html>
