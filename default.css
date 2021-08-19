@@ -1,16 +1,29 @@
 :root{
-    --main-clr: #282c34;
+    --main-bcg: #282c34;
+    --scnd-bcg: #0e141b;
     --scnd-clr: #fff;
+    --h2-fs: 50px;
 }
 * {
   font-family: 'Sora', sans-serif;  
-  background: var(--main-clr);
   color: var(--scnd-clr);
   box-sizing: border-box;
 }
-main{
+html, body {
+  background-color: var(--main-bcg);
+  margin: 0;
+  padding: 0;
+}
+
+main, .about, .skills-wrapper, .projects{
     width: 1000px;
     margin: 0 auto;
+    padding: 50px 0;
+}
+
+/* Main / Intro */
+.s1{
+  background-color: var(--main-bcg);
 }
 .intro{
   display: flex;
@@ -28,7 +41,7 @@ main{
   margin: 0.3em 0;
 }
 .intro h2{
-  font-size: 50px;
+  font-size: var(--h2-fs);
   font-weight: 400;
   margin: 0.3em 0;
 }
@@ -45,10 +58,79 @@ main{
   font-size: 20px;
   font-weight: 500;
   background-color: var(--scnd-clr);
-  color: var(--main-clr);
+  color: var(--main-bcg);
   border-radius: 5px;
   cursor: pointer;
 }
 .intro button:hover{
   opacity: 0.8;
+}
+
+.intro h2 {
+
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+  border-right: .15em solid orange; /* The typwriter cursor */
+  white-space: nowrap; /* Keeps the content on a single line */
+  margin: 0.3em 20px 0.3em 0;
+  animation: 
+    typing 2s steps(70, end),
+    blink-caret .75s step-end infinite;
+}
+
+/* The typing effect */
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: orange; }
+}
+
+/* About */
+
+.s2{
+  background-color: var(--scnd-bcg);
+}
+.about h2{
+  font-size: var(--h2-fs);
+  text-align: center;
+}
+.about p{
+  font-size: 20px;
+  text-align: justify;
+}
+
+
+/* Skills */
+.s3{
+  background-color: var(--main-bcg);
+}
+.skills-wrapper h2{
+  font-size: var(--h2-fs);
+  text-align: center;
+}
+.skills{
+  display: flex;
+  justify-content: center;
+}
+.skills figcaption{
+  width: 150px;
+  text-align: center;
+  font-size: 26px;
+
+}
+.skills svg{
+  max-width: 200px;
+}
+
+/* My Projects */
+.s4{
+  background-color: var(--scnd-bcg);
+}
+.projects h2{
+  font-size: var(--h2-fs);
+  text-align: center;
 }
