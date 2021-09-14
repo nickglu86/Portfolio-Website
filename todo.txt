@@ -1,0 +1,6 @@
+############################
+Sections for the Site
+- Intro
+- About(Work Expirience)
+- Skill & Technologies
+- Resources & Snippets (Chat bot)
